@@ -1,6 +1,6 @@
 # utils
 
-**create-user.sh**
+**create--new-user.sh**
 ```
-$: sudo sh create-user.sh user full_name
+$: sudo sh create-new-user.sh user full_name
 ```
