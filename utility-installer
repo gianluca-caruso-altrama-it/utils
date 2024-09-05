@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# update before run script
+sudo apt update -y
+sudo apt upgrade -y
+
+# Keep it updated (automation)
+sudo apt-get install unattended-upgrades
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+
+# failban
+sudo apt install -y fail2ban
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+# TODO: config failban
+
+# net
+sudo apt-get -y install htop net-tools tree curl wget vim git
+
+# Install nohang to prevent vps freeze
+sudo add-apt-repository ppa:oibaf/test
+sudo apt update
+sudo apt install nohang
+sudo systemctl enable -now nohang-desktop.service
+
+# uidmap for no-root users
+sudo apt-get install -y uidmap
+
+# Install and configure Caddy
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+
+# update system
+sudo apt update -y
+sudo apt upgrade -y
