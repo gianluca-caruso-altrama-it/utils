@@ -24,3 +24,13 @@ sudo apt upgrade -y
 
 # install packages
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Install newuidmap & newgidmap binaries
+apt-get install -y uidmap
+
+# setup docker without root
+dockerd-rootless-setuptool.sh install
+
+# system update
+sudo apt update -y
+sudo apt upgrade -y
