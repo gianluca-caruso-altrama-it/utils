@@ -1,0 +1,12 @@
+services:
+
+  db:
+    image: mysql:lts
+    command: --default-authentication-plugin=caching_sha2_password
+    restart: always
+    ports:
+      - "127.0.0.1:${MYSQL_PORT:-43060}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-foo.bar}
+    volumes:
+      - ./db_data:/var/lib/mysql
