@@ -14,8 +14,22 @@ sudo systemctl enable fail2ban
 sudo systemctl start fail2ban
 # TODO: config failban
 
+
 # net
 sudo apt-get -y install htop net-tools tree curl wget vim git
+
+# fish
+sudo apt install -y fish
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install jorgebucaran/nvm.fish
+
+# nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install lts
+nvm use lts
+
+# java
+sudo apt install openjdk-17-jdk
 
 # Install nohang to prevent vps freeze
 sudo add-apt-repository ppa:oibaf/test
