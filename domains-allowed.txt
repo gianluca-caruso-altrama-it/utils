@@ -1,0 +1,48 @@
+domains:
+  # Docker
+  *.docker.com (443/tcp)
+  *.docker.io (443/tcp)
+
+  # Version Control (GitHub, GitLab)
+  *.github.com (22/tcp, 443/tcp)
+  *.gitlab.com (22/tcp, 443/tcp)
+  *.githubusercontent.com (443/tcp)
+
+  # Maven Repositories (Java)
+  *.maven.org (443/tcp)
+  *.repo.maven.apache.org (443/tcp)
+  *.oss.sonatype.org (443/tcp)
+
+  # Node.js and npm Packages (JavaScript)
+  *.nodejs.org (443/tcp)
+  *.npmjs.org (443/tcp)
+  *.npmjs.com (443/tcp)
+  *.unpkg.com (443/tcp)
+
+  # PHP and Laravel (Composer)
+  *.packagist.org (443/tcp)
+  *.getcomposer.org (443/tcp)
+
+  # Base Docker Images (Alpine, Nginx, Ubuntu)
+  *.alpinelinux.org (443/tcp)
+  *.nginx.org (443/tcp)
+  *.ubuntu.com (443/tcp)
+
+  # Cloud and Dependency Repositories
+  *.cloudsmith.io (443/tcp)
+  *.cloudflare.com (443/tcp)
+
+  # Databases (MongoDB, MySQL, etc.)
+  *.mongodb.org (443/tcp)
+  
+  # CDN and Common Libraries
+  *.cdnjs.com (443/tcp)
+  *.jsdelivr.net (443/tcp)
+
+  # JavaScript Frameworks and Additional Repositories
+  *.yarnpkg.com (443/tcp)
+  *.jquery.com (443/tcp)
+  
+  # Python (for possible use with Docker or scripting)
+  *.pypi.org (443/tcp)
+  *.pythonhosted.org (443/tcp)
