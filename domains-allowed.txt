@@ -22,6 +22,8 @@ domains:
   # PHP and Laravel (Composer)
   *.packagist.org (443/tcp)
   *.getcomposer.org (443/tcp)
+  *.sury.org (443/tcp)
+  
 
   # Base Docker Images (Alpine, Nginx, Ubuntu)
   *.alpinelinux.org (443/tcp)
