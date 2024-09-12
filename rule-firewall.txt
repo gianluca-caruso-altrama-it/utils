@@ -1,0 +1,13 @@
+domains:
+  *.docker.com (443/tcp)
+  *.github.com (22/tcp,443/tcp)
+  *.gitlab.com (22/tcp,443/tcp)
+  *.githubusercontent.com (443/tcp)
+  *.cloudsmith.io (443/tcp)
+  *.mongodb.org (443/tcp)
+  *.docker.io (443/tcp)
+  *.alpinelinux.org (443/tcp)
+  *.nodejs.org
+  *.npmjs.org 
+  *.npmjs.com
+  *.unpkg.com
