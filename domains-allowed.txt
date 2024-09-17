@@ -2,6 +2,7 @@ domains:
   # Docker
   *.docker.com (443/tcp)
   *.docker.io (443/tcp)
+  *.ghcr.io (443/tcp)
 
   # Version Control (GitHub, GitLab)
   *.github.com (22/tcp, 443/tcp)
