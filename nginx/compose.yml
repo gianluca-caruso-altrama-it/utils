@@ -1,0 +1,11 @@
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: my_nginx
+    ports:
+      - "8080:80" # Mappa la porta 8080 della macchina alla porta 80 del container
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Monta il file di configurazione di Nginx
+      - ./html:/usr/share/nginx/html:ro       # Monta la cartella html per i contenuti statici
+    restart: unless-stopped
