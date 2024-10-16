@@ -34,3 +34,6 @@ dockerd-rootless-setuptool.sh install
 # system update
 sudo apt update -y
 sudo apt upgrade -y
+
+systemctl --user enable docker
+systemctl --user start docker
