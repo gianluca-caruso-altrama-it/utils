@@ -37,3 +37,4 @@ sudo apt upgrade -y
 
 systemctl --user enable docker
 systemctl --user start docker
+sudo loginctl enable-linger $USER
