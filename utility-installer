@@ -6,7 +6,7 @@ sudo apt upgrade -y
 
 # Keep it updated (automation)
 sudo apt-get install unattended-upgrades
-sudo dpkg-reconfigure --priority=low unattended-upgrades
+sudo dpkg-reconfigure --priority=medium unattended-upgrades
 
 # failban
 sudo apt install -y fail2ban
